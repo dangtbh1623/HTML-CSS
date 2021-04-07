@@ -203,10 +203,12 @@ html {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 24px;
+    text-shadow: 0 0 1px black;
 }
 
 #slider .slider-description {
     font-size: 15px;
+    text-shadow: 0 0 1px black;
 }
 
 #content .content-section {
