@@ -6,10 +6,68 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* common */
+
+.mt-8 {
+    margin-top: 8px;
 }
 
 .white-text {
     color: white !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: calc(100%/3);
+}
+
+.col-second {
+    width: calc(100%/2);
+}
+
+.col-one {
+    width: 100%;
+}
+
+.btn {
+    padding: 8px 16px;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    color: black;
+    background-color: #ccc;
+    transition: all 0.2s ease-in-out;
 }
 
 #header {
@@ -52,6 +110,7 @@ html {
 .subnav li:hover a {
     color: #000;
     background-color: #ccc;
+    transition: all 0.2s ease-in-out;
 }
 
 #nav li:hover .subnav {
@@ -83,9 +142,25 @@ html {
     font-size: 10px;
 }
 
+#header #menu-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header #menu-button,
 #header #search-button {
     float: right;
     padding: 0px 16px;
+}
+
+#header #menu-button:hover {
+    background-color: #ccc;
+}
+
+#header #menu-button:hover .ti-menu {
+    color: #000;
 }
 
 #header #search-button:hover {
@@ -93,6 +168,7 @@ html {
     cursor: pointer;
 }
 
+#header .header-menu,
 #header .header-search {
     color: white;
     font-size: 20px;
@@ -135,8 +211,9 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 64px 16px;
+    padding: 64px 16px 112px;
 }
 
 .content-section .section-heading {
@@ -175,12 +252,8 @@ html {
 }
 
 .content-section .member-img {
-    width: 154px;
+    width: 160px;
     border-radius: 4px;
-}
-
-.content-section .clear {
-    clear: both;
 }
 
 .tour-section {
@@ -217,4 +290,121 @@ html {
     height: 16px;
     border-radius: 50%;
     background-color: black;
+}
+
+.tour-section .place-list {
+    margin-top: -8px;
+}
+
+.tour-section .place-item {
+    float: left;
+    width: calc(100%/3);
+    padding: 0px 8px;
+}
+
+.tour-section .place-img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.tour-section .place-img:hover {
+    opacity: 0.5;
+}
+
+.tour-section .place-content {
+    background-color: white;
+    font-size: 15px;
+    padding: 16px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.tour-section .place-heading {
+    font-weight: 600;
+    padding-top: 16px;
+}
+
+.tour-section .place-time {
+    padding-top: 16px;
+    color: #757575;
+}
+
+.tour-section .place-desc {
+    padding: 16px 0px;
+    line-height: 1.4;
+}
+
+
+/* Contact */
+
+.contact-content {
+    margin-top: 32px;
+}
+
+.contact-content .contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info i[class*="ti-"] {
+    display: inline-block;
+    width: 30px;
+}
+
+.contact-content .contact-form {
+    font-size: 15px;
+}
+
+.contact-content a {
+    opacity: 0.8;
+}
+
+.contact-content a:hover {
+    opacity: 1;
+}
+
+.contact-form .form-control {
+    padding: 9px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.form-btn {
+    margin-top: 16px;
+    float: right;
+    font-size: 15px;
+}
+
+.map-img {
+    width: 100%;
+    display: block;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.copyright {
+    margin-top: 15px;
+    color: #757575;
+    font-size: 15px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #757575;
+}
+
+#footer a:hover {
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+}
+
+#footer i[class*="ti-"] {
+    font-size: 24px;
+    color: #757575;
+    display: inline-block;
+    width: 32px;
 }
